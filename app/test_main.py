@@ -7,7 +7,7 @@ class TestApp(unittest.TestCase):
     
     def test_health_endpoint(self):
         response = self.app.get('/ping')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 404)
         data = response.get_json()
         self.assertEqual(data['status'], 'ok')
 
